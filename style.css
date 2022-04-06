@@ -1,36 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic&family=Smooch+Sans&display=swap');
 
+:root {
+    --soft-white: #cacacafb;
+
+}
+
 body {
     display: flex;
     justify-content: center;
+    height: 100%;
+    margin: 0px;
     
 }
 
-
 [src$=".jpg"]{
-    width: 400px;
-    height: 100%;
+    width: 100%;
+    height: 700px;
+    vertical-align: bottom;
 }
 
-.image-container, .image-logo-container {
+.image-logo-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: #34343474;
+    width: 100%;
+    padding: 5px 0px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    gap: 20px;
+    justify-content: center;
 }
 
-.image-container img:first-child {
+.image-container {
     position: relative;
     top: 0;
     left: 0;
+    width: 500px;
+    height: 100%;
 }
 
-.image-container div:last-child {
-    position: absolute;
+.logo {
+    width: 100px;
 }
 
 .logo-text {
     font-family: 'GFS Neohellenic', sans-serif;
     font-family: 'Smooch Sans', sans-serif;
     font-size: 80px;
+    color: var(--soft-white);
 }
