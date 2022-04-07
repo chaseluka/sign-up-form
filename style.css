@@ -1,22 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic&family=Montserrat&family=Ubuntu:wght@300&display=swap');
 
 :root {
-    --soft-white: #e7e7e7fb;
+    --white: #fffffffb;
     --gentle-grey: #fbfbfb;
+    --blue: #083c6d;
 
 }
 
 body {
     display: flex;
-    justify-content: center;
     height: 100vh;
-    margin: 0px;
-    
+    margin: 0px; 
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 841px) {
+    body {
+        flex-direction: column;
+    }
+    body > div:last-child, body > div:first-child {
+        width: 100%;
+    }
+    body div:first-child {
+        height: 20rem;
+    }
+
+
+    body > div:last-child {
+        padding: 4% 4% 0 2%;
+    }
     
 }
 
 [src$=".jpg"]{
     width: 100%;
+    height: 100%;
     vertical-align: bottom;
 }
 
@@ -24,12 +42,13 @@ body {
     position: absolute;
     top: 30%;
     left: 0;
-    background-color: #34343474;
+    background-color: #343434a4;
     width: 100%;
     padding: 5px 0px;
     display: flex;
     gap: 10px;
     justify-content: center;
+    align-items: center;
 }
 
 .image-container {
@@ -47,7 +66,7 @@ body {
 .logo-text {
     font-family: 'GFS Neohellenic', sans-serif;
     font-size: 80px;
-    color: var(--soft-white);
+    color: var(--white);
 }
 
 .right-side-information {
@@ -55,7 +74,7 @@ body {
     display: flex;
     gap: 30px;
     flex-direction: column;
-    padding: 8% 8% 8% 6%;
+    padding: 8% 8% 0 6%;
     width: 60vw;
 }
 
@@ -64,7 +83,7 @@ body {
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
-    box-shadow: 1.5px 1.5px 1.5px 1.5px #c4c4c4fb;
+    box-shadow: 1.8px 1.8px 1.8px 1.8px #c4c4c4fb;
     width: 100%;
 }
 
@@ -72,7 +91,7 @@ form {
     display: grid;
     font-size: 0.75rem;
     font-weight: bold;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 17px 50px;
@@ -105,3 +124,30 @@ form input{
     width: min(25rem, 80%);
 }
 
+button {
+    appearance: none;
+    background-color: var(--blue);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    max-width: 12rem;
+    padding: 14px 30px;
+    margin-left: 17px;
+
+}
+
+.log-in-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+a:hover {
+    text-decoration: underline var(--blue);
+}
