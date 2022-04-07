@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic&family=Montserrat&family=Ubuntu:wght@300&display=swap');
 
 :root {
-    --soft-white: #d2d2d2fb;
-    --gentle-grey: #f1f1f1;
+    --soft-white: #e7e7e7fb;
+    --gentle-grey: #fbfbfb;
 
 }
 
@@ -53,26 +53,55 @@ body {
 .right-side-information {
     background-color: var(--gentle-grey);
     display: flex;
+    gap: 30px;
     flex-direction: column;
-    padding: 50px;
+    padding: 8% 8% 8% 6%;
     width: 60vw;
 }
 
 .form-container {
-    background-color: #fbfbfb;
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
+    margin-top: 20px;
     box-shadow: 1.5px 1.5px 1.5px 1.5px #c4c4c4fb;
+    width: 100%;
 }
 
 form {
     display: grid;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    font-weight: bold;
     font-family: 'Ubuntu', sans-serif;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 17px 50px;
+    width: 100%;
+
     
 }
 
 .sign-up-description-container {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: bolder;
 }
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+legend {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    align-self: center;
+}
+
+form input{
+    width: min(25rem, 80%);
+}
+
