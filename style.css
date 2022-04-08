@@ -13,6 +13,7 @@ body {
     margin: 0px; 
     max-width: 100%;
     overflow-x: hidden;
+    background-color: var(--gentle-grey);
 }
 
 @media only screen and (max-width: 841px) {
