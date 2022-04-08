@@ -56,6 +56,15 @@ body {
     align-items: center;
 }
 
+.photo-author {
+    position: absolute;
+    top: 95%;
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+    color: rgb(228, 228, 228);
+}
+
 .image-container {
     position: relative;
     top: 0;
@@ -95,7 +104,7 @@ body {
 form {
     display: grid;
     font-size: 0.75rem;
-    font-weight: bold;
+    font-weight: bolder;
     font-family: 'Montserrat', sans-serif;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -128,6 +137,25 @@ legend {
 
 form input{
     width: min(25rem, 80%);
+    appearance: none;
+    border: 1.5px solid #d1d1d1;
+    border-radius: 3px;
+    padding: 4px 4px 4px 6.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #292929;
+    background-color: #fefefe;
+}
+
+form input:focus {
+    outline: none;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #c4c4c4fb;
+    transform: scale(1.02);
+    border: 1px solid #0a559b;
+}
+
+form input:invalid:focus {
+    border: 1px solid #c20404;
 }
 
 button {
@@ -140,11 +168,11 @@ button {
     max-width: 12rem;
     padding: 14px 30px;
     margin-left: 17px;
-    box-shadow: 1.5px 1.5px 1.5px 1.5px #dadada;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #c4c4c4fb;
 
 }
 
-button:hover {
+button:hover, button:focus {
     transform: scale(1.05);
     background-color: #0d4f8c;
 
@@ -169,3 +197,10 @@ a:link, a:visited {
 a:hover {
     text-decoration: underline var(--blue);
 }
+
+.error {
+    font-family: customFontBold;
+    font-size: .7rem;
+    color: rgb(255, 69, 100);
+    position: absolute;
+  }

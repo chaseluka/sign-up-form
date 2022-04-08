@@ -15,6 +15,7 @@
             <img  class="logo" src="images/sign-up-form-logo-real.png" alt="A fly with a bold hand-drawn circle sourounded by it.">
             <div class="logo-text">Notos</div>
         </div>
+        <div class="photo-author">Photo by Cody Chan on Unsplash</div>
         
     </div>
     <div class="right-side-information">
@@ -28,27 +29,27 @@
                 <legend>Let's do this!</legend>
                 <div class="input-container">
                     <label for="firstName">FIRST NAME</label>
-                    <input type="text" id="firstName">
+                    <input type="text" id="firstName" required>
                 </div>
                 <div class="input-container">
                     <label for="lastName">LAST NAME</label>
-                    <input type="text" id="lastName">
+                    <input type="text" id="lastName" required>
                 </div>
                 <div class="input-container">
                     <label for="email">EMAIL</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" required>
                 </div>
                 <div class="input-container">
                     <label for="phoneNumber">PHONE NUMBER</label>
-                    <input type="tel" id="phoneNumber">
+                    <input type="tel" id="phoneNumber" minlength="9" maxlength="9">
                 </div>
                 <div class="input-container">
                     <label for="password">PASSWORD</label>
-                    <input type="pwd" id="password">
+                    <input type="password" id="password" required>
                 </div>
                 <div class="input-container">
                     <label for="passwordConf">CONFIRM PASSWORD</label>
-                    <input type="pwd" id="passwordConf">
+                    <input type="password" id="passwordConf" required>
                 </div>
                 
             </form>
